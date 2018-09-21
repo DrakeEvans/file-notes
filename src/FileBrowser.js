@@ -7,7 +7,6 @@ const path = require("path");
 export default class FileBrowser extends Component {
   constructor(props) {
     super(props);
-    this.createFileObject = this.createFileObject.bind(this);
     this.handleClick = this.handleClick.bind(this);
     this.backButton = this.backButton.bind(this);
 
@@ -35,12 +34,14 @@ export default class FileBrowser extends Component {
       var name = path.basename(parentDir);
       parentDir = path.dirname(parentDir) || null;
     }
-    const isDirectory = fs.statSync(fullPath).isDirectory();
+    const stats = fs.statSync(fullPath)
+    const isDirectory = stats.isDirectory();
     return {
       name,
       parentDir,
       fullPath,
-      isDirectory
+      isDirectory,
+      stats,
     };
   }
 
