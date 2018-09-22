@@ -1,0 +1,24 @@
+
+
+
+.file-list {
+  overflow: scroll;
+  height: 100vw;
+}
+
+.file-row {
+  display:flex
+}
+
+.file-item {
+  width: 40vw;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.file-note {
+  width: 60vw;
+  word-wrap: break-word;
+  word-break: break-all;
+  /* max-height: 200%; */
+}
