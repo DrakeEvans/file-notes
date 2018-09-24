@@ -39,7 +39,6 @@ export default class FileBrowser extends Component {
 
   backHistoryButton() {
     let { history } = this.state
-    console.log('history', history)
     console.log('historyObj', history[history.length-2])
     const newState = this.updateActiveDirectory(history[history.length-2], false)
     newState.history = history.slice(0,history.length -1)
