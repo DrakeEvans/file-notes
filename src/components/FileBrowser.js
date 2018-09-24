@@ -6,6 +6,8 @@ import {
   defaultDirectory, db, updateDatabase
 } from "../fileHelperFunctions";
 
+
+
 export default class FileBrowser extends Component {
   constructor(props) {
     super(props);
