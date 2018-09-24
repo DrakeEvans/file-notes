@@ -1,13 +1,27 @@
-
-
+body {
+  padding: 10px;
+}
 
 .file-list {
   overflow: scroll;
   height: 100vw;
+  margin: 10px;
+}
+
+.file-browser-header {
+  display: flex;
+
+}
+
+.file-browser-header > * {
+  margin: 0px 10px;
+
 }
 
 .file-row {
-  display:flex
+  display: flex;
+  border-bottom: 1px solid black;
+  padding: 10px;
 }
 
 .file-item {
@@ -20,5 +34,22 @@
   width: 60vw;
   word-wrap: break-word;
   word-break: break-all;
-  /* max-height: 200%; */
+  height: 1em;
+}
+
+.file-item-header {
+  width: 40vw;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.file-note-header {
+  width: 60vw;
+  word-wrap: break-word;
+  word-break: break-all;
+  height: 1em;
+}
+
+textarea {
+  resize: vertical;
 }

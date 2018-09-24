@@ -1,9 +1,21 @@
 import React from "react";
 
 function FileList(props) {
-  const { fileList: files, handleClick, handleNoteChange } = props;
+  const { fileList: files, handleClick, handleNoteChange, textAreaAdjust } = props;
   return (
     <div className="file-list">
+    <div className="file-row">
+              <div
+                className="file-item-header"
+              >
+                File Name
+              </div>
+              <div
+                className="file-note-header"
+              >
+              Note
+            </div>
+            </div>
       {Object.values(files)
         .filter((elem) => {
           return elem.name[0] !== ".";
@@ -20,8 +32,9 @@ function FileList(props) {
               <textarea
                 className="file-note"
                 name={elem.name}
-                value={elem.note}
+                value={elem.note ? elem.note : ''}
                 onChange={handleNoteChange}
+                onKeyUp={textAreaAdjust}
               />
             </div>
           );
